@@ -324,6 +324,12 @@
             color: var(--accent-color);
             font-size: 1.125rem;
         }
+
+        br {
+            display: block;
+            margin: 5px 0;
+        }
+
         .about-paragraph {
             font-size: 1.125rem;
             color: var(--zinc-700);
@@ -355,7 +361,7 @@
         .form-input, .form-textarea {
             margin-top: 0.25rem;
             display: block;
-            width: 100%;
+            width: 93.5%;
             justify-content: center;
             padding: 0.5rem 1rem;
             background-color: var(--zinc-100);

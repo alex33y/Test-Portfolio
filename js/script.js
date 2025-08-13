@@ -79,7 +79,6 @@
                 // Instead of a native alert(), which is blocked in this sandbox,
                 // you would use a custom message box or dialog in a real app.
                 // For demonstration, a console log is used here.
-                alert('Thank you for your inquiry! I will get back to you soon.');
                 commissionsForm.reset();
             });
 

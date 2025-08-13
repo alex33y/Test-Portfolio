@@ -79,17 +79,23 @@
             <h2 class="text-4xl font-extrabold text-center text-zinc-900 tracking-tight">About Me</h2>
             <div class="about-card">
                 <div class="about-info">
-                    <img src="qwwr.jpg" alt="Your Name" class="about-photo">
                     <div class="about-text-content">
-                        <h3 class="about-title">Hello, I'm [name]</h3>
-                        <p class="about-subtitle">A Digital Artist specializing in [Your Medium/Style]</p>
+                        <h3 class="about-title">Hello, I'm Alima</h3>
+                        <p class="about-subtitle">A Digital Artist specializing in illustration, graphic design and collaborative art projects.</p>
                     </div>
                 </div>
                 <p class="about-paragraph">
-                    [Your Bio Paragraph 1: Write a little about your journey as an artist, your influences, and what inspires you. Talk about your passion and what you hope to achieve through your work.]
+                    A young artist from Kazakhstan with international work and study experience in the United States and the Netherlands, 
+                    specializing in illustration, graphic design, and collaborative art projects.
+                    Author and curator of art publications, 
+                    successfully producing zines and charitable projects that have raised over $19,000 for environmental and social initiatives. 
                 </p>
+                <br> <!-- easier to read with a line break -->
                 <p class="about-paragraph">
-                    [Your Bio Paragraph 2: Describe your creative process. What tools or techniques do you use? What themes or emotions do you explore in your art? This helps potential clients understand your unique style.]
+                    Experienced in teaching and organizing art classes for high school students in Kazakhstan. 
+                    Actively develops her own art brand on social media, fostering an international community of artists and writers. 
+                    Award-winning participant in international competitions and exhibitions, 
+                    with both solo and group shows in the USA and abroad.
                 </p>
             </div>
         </section>
@@ -112,7 +118,7 @@
                 </div>
                 <div class="form-group">
                     <label for="details" class="form-label">Project Details</label>
-                    <textarea id="details" name="details" rows="5" required class="form-textarea" placeholder="Describe your vision, desired medium, and any specific requirements."></textarea>
+                    <textarea id="details" name="message" rows="5" required class="form-textarea" placeholder="Describe your vision, desired medium, and any specific requirements."></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Submit Inquiry</button>
             </form>
@@ -136,6 +142,22 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    emailjs.init('ZCu-kcCgCifrFAbUi');
+    document.getElementById('commission-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      emailjs.sendForm('service_dnjrng4', 'template_jpr9cot', this)
+        .catch(error => {
+          console.error('Failed...', error);
+          alert('Message failed to send. Please try again later');
+        });
+    });
+  });
+</script>
+<script src="js/script.js"></script>
+
+
 </body>
 </html>
